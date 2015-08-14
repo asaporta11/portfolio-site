@@ -54,6 +54,10 @@ body {
 .projects {
 	height: 100vh;
 
+	section {
+		position: relative; //because position absolute means position yourself in relation to the nearest parent with absolute or relative positioning
+	}
+	//this triangle works! and the text is going in the right direction (positioned correctly, still needs left and right instrux)
 	#triangle-down {
 		width: 100vw;
 		height: 100vh;
@@ -61,64 +65,36 @@ body {
 		border-right: 50vw solid transparent;
 		border-top: 50vw solid #07bed4;	
 		margin: 0 0;
-		position: relative; //because position absolute means position yourself in relation to the nearest parent with absolute or relative positioning
 	}
 	.pulseband-desc {
-		p {
 			background-color: #07bed4;
 			// opacity: .01;
 			position: absolute;
 			top: 0px;
 			left: 0px;
 			color: red;
-		}
 	}
+	#triangle-down {
+		
+	}
+
+	// //this triangle works! and the text is going in the right direction (positioned correctly, still needs left and right instrux)
 	// #triangle-down {
-	// 	width: 0px;
-	// 	height: 0px;
-	// 	padding-left: 50%;
-	// 	// padding-right: 64vh solid transparent;
-	// 	padding-top: 50%;
-	// 	padding-bottom: 10px;
-	// 	overflow: hidden;	
+	// 	width: 100vw;
+	// 	height: 100vh;
+	// 	border-left: 50vw solid transparent;
+	// 	border-right: 50vw solid transparent;
+	// 	border-top: 50vw solid #07bed4;	
 	// 	margin: 0 0;
-	// 	position: absolute; //because position absolute means position yourself in relation to the nearest parent with absolute or relative positioning
-	// 	top: 10px;
-	// 	right: 10px;
 	// }
-
-	// #triangle-down:after {
-	// 	content: "";
-	// 	display: block;
-	// 	width: 0;
-	// 	height: 0;
-	// 	margin-top: 10px;
-	// 	margin-left: 10px;
-
- //   		border-top: 1500px solid transparent;
-	//    border-bottom: 1500px solid transparent;
-	//    border-left: 1500px solid rgb(230, 230, 230);
+	// .pulseband-desc {
+	// 		background-color: #07bed4;
+	// 		// opacity: .01;
+	// 		position: absolute;
+	// 		top: 0px;
+	// 		left: 0px;
+	// 		color: red;
 	// }
-
-
 }
 
 
-
-// p{
-// 	color: red;
-// }
-
-// body{
-// 	font-size: 15px;
-// }
-
-// a:hover{
-// 	background-color: red;
-// }
-
-// section{
-// 	div.hello{
-// 		margin: 0;
-// 	}
-// }

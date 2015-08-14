@@ -41,15 +41,16 @@ body {
 /************* PROJECTS *************/
 .projects {
   height: 100vh; }
+  .projects section {
+    position: relative; }
   .projects #triangle-down {
     width: 100vw;
     height: 100vh;
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
     border-top: 50vw solid #07bed4;
-    margin: 0 0;
-    position: relative; }
-  .projects .pulseband-desc p {
+    margin: 0 0; }
+  .projects .pulseband-desc {
     background-color: #07bed4;
     position: absolute;
     top: 0px;
