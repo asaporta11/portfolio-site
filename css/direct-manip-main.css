@@ -1,0 +1,476 @@
+/************* GENERAL *************/
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif; 
+  color: #5f5f5f;
+}
+
+h1, h3 {
+  font-family: 'Signika', sans-serif;
+  font-size: 56px;
+  color: #07bed4;
+  text-align: center;
+  text-transform: uppercase;
+}
+p {
+  line-height: 120%;
+}
+
+/************* NAV *************/
+/*nav based on https://teamtreehouse.com/community/forum-tip-create-a-sticky-navigation-with-css-and-jquery-2*/
+/*
+conversion notes for below:
+header is now .title-page
+main container starts after title-page
+get rid of header
+move nav below title page but above main container 
+changed javascript to get viewport height
+*/
+body {
+  margin: 0;
+  padding-top: 100vh;
+}
+.title-page {
+  background: blue;
+  height: 600px;
+}
+.main-nav, .main-container {
+  position: relative;
+}
+.main-nav {
+  background: white;
+  height: 60px;
+  position: relative;
+  z-index: 1000000;
+  box-shadow: 0 2px 3px rgba(0,0,0, 0.4);
+}
+.main-container {
+  background: white;
+  padding-top: 110px; /*padding: 110px 50px 50px;*/ /*top LR bottom*/
+  margin-bottom: -80px; /*because .main-nav height is 80px*/
+}
+.title-page, .main-nav-scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+.main-nav ul {
+  float: right;
+}
+.main-nav ul li {
+  float: none;
+  display: inline-block;
+  padding-top: 20px;
+  padding-right: 30px ;
+}
+.main-nav ul li a {
+  text-decoration: none;
+  color: gray;
+  font-weight: 600;
+  font-family: signika 600;
+  font-size: 20px;
+}
+.nav-active {
+  background-color: blue;
+}
+
+/*GOOD*/
+/*
+header {
+  background: blue;
+  height: 300px;
+  padding-top: 50px;
+}
+.main-nav, .main-container {
+  position: relative;
+}
+.main-nav {
+  background: white;
+  height: 80px;
+  position: relative;
+  z-index: 1000000;
+  box-shadow: 0 2px 3px rgba(0,0,0, 0.4);
+}
+.main-container {
+  background: white;
+  padding-top: 110px; /*padding: 110px 50px 50px;*/ /*top LR bottom*/
+/*  margin-bottom: -80px; because .main-nav height is 80px
+}*/
+/*header, .main-nav-scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+body {
+  margin: 0;
+  padding-top: 250px;
+}*/
+
+
+/************* TITLE *************/
+.title-page {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/hero-bg.jpg);
+  background-size: cover;
+  color: #ffffff;
+  text-align: center; }
+  .title-page h1 {
+    text-transform: uppercase; }
+  .title-page h2 {
+    font-weight: 200;
+    font-size: 38px;
+    margin-top: 60vh; }
+  .hex-btn {
+    position: relative;
+    width: 50px; 
+    height: 28.87px;
+    background-color: #64C7CC;
+    margin: 14.43px 0;
+  }
+
+
+
+/************* ABOUT *************/
+.about {
+  width: 100%;
+  height: 80vh;
+  background-color: #ffffff; }
+  .about h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #07bed4; 
+    margin: 3%;
+  }
+  .about p {
+    text-align: center;
+    margin: 0% 20%;
+    font-size: 18px; 
+    padding: 100 300; 
+  }
+  .about button {
+    margin: auto; }
+
+/************* PROJECTS *************/
+.projects {
+  height: 100vh; }
+  .projects section {
+    position: relative; }
+  .projects #triangle-down {
+    width: 100vw;
+    height: 100vh;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 50vw solid #07bed4;
+    margin: 0 0; }
+  .projects .pulseband-desc {
+    background-color: #07bed4;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: red; }
+
+/************* ADDITIONS TO CSS *************/
+/************* TITLE *************/
+.title-frame {
+  border: 1.5px solid white;
+  height: 100vh;
+  -ms-transform: scale(0.97,0.97); /* IE 9 */
+  -webkit-transform: scale(0.97,0.97); /* Safari */
+  transform: scale(0.97,0.97);
+}
+/*.title-frame {
+  border: 5px solid white;
+  height: 96vh;
+  margin: 5px 5px;
+}*/
+.circ-btn {
+/*  width: 6%;
+  margin: 20vh auto;*/
+/*  text-align: center;*/
+}
+.round-btn-circ {
+/*  width: 100%;
+  height:0;
+  padding-bottom: 100%;*/
+  border-radius: 50%;
+/*  border: 1.5px solid #ffffff;*/
+  overflow: hidden;
+  position: relative;
+  margin-top: 15vh;
+  background: none;
+  /*box-shadow: 0 0 3px gray;*/
+}
+.round-btn-circ:hover {
+  /*background: #0dd9e6;*/
+  /*background: -webkit-linear-gradient(#00ffff, #c21e5c);*/    /* For Safari 5.1 to 6.0 */
+  /*background: -o-linear-gradient(#00ffff, #c21e5c);*/      /* For Opera 11.1 to 12.0 */
+  /*background: -moz-linear-gradient(#00ffff, #c21e5c);*/      /* For Firefox 3.6 to 15 */
+  /*background: linear-gradient(#00c7dd, #c21e5c);*/       /* Standard syntax */
+}
+.round-btn {
+  display: block;
+  float: left;
+  width: 100%;
+  padding-top: 25%;
+  padding-bottom: 25%;
+  line-height: 1em;
+  margin-top: -0.5em;
+
+  /*text-align: center;
+  color: green;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;*/
+}
+.fa-angle-down {
+/*  margin-top: 10%;*/
+  text-align: center;
+}
+.hex-btn:before,
+.hex-btn:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+
+.hex-btn:before {
+  bottom: 100%;
+  border-bottom: 14.43px solid #64C7CC;
+}
+
+.hex-btn:after {
+  top: 100%;
+  width: 0;
+  border-top: 14.43px solid #64C7CC;
+}
+
+/************* ABOUT *************/
+.about{
+  height: 100vh;
+}
+.pic-container img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #64C7CC;
+}
+.pic-container {
+  text-align: center;
+  margin-bottom: 3%;
+}
+.res-btn {
+  text-align: center;
+  position: relative;
+  margin-top: 15px;
+}
+.res-btn a {
+  background-color: #07bed4;
+  text-decoration: none;
+  color: white;
+  padding: 8px 15px;
+  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: .3s ease-out;
+}
+.res-btn a:hover {
+  background-color: purple;
+}
+.border-res-btn {
+  border: 1px solid #07bed4;
+  position: absolute;
+  left: 45%;
+  height: 50px;
+  margin: 20px;
+}
+.border-res-btn a:hover {
+  border: 1px solid purple;
+}
+
+/************* PROJECTS *************/
+.projects-wrapper {
+  height: 100vh;
+  position: relative;
+}
+.projects-section h3 {
+  margin: 1%;
+}
+
+/******     PULSEBAND    ******/
+.test-pulseband {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  background-image: url(../img/beachside-walk-pulseband.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+.test-pulseband-cover {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  background-color: rgba(0,0,255,0.4);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+.test-pulseband-cover:hover {
+  background-color: rgba(0,0,255,0.7);
+}
+.pulseband-title {
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  position: relative;
+  transform: translateY(100%);
+}
+.pulseband-title h4 {
+  font-size: 40px;
+  margin-bottom: 1%;
+}
+
+/******     SPOTIFY    ******/
+.test-spotify {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  background-image: url(../img/concert-spotify.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+.test-spotify-cover {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  background-color: rgba(0,255,0,0.4);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+.test-spotify-cover:hover {
+  background-color: rgba(0,255,0,0.6);
+}
+/*trying to figure out what's going on here*/
+.spotify-title {
+  font-size: 18px;
+  text-align: center; 
+  color: white;
+  position: relative;
+  transform: translateY(45vh);
+/*  margin-left: 50px;*/
+  width: 50%;
+  margin: 0 auto;
+}
+.spotify-title h4 {
+  font-size: 40px;
+  margin-bottom: 1%;
+}
+
+/******     SELFIE    ******/
+.test-selfie {
+  position: absolute;
+  left: 50%;
+  width: 50vw;
+  height: 100vh;
+  background-image: url(../img/social-selfie.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+.test-selfie-cover {
+  position: absolute;
+  left: 50%;
+  width: 50vw;
+  height: 100vh;
+  background-color: rgba(50,200,50,0.4);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+.test-selfie-cover:hover {
+  background-color: rgba(0,255,0,0.6);
+}
+/*trying to figure out what's going on here*/
+.selfie-title {
+  font-size: 18px;
+  text-align: center; 
+  color: white;
+  position: relative;
+  transform: translateY(45vh);
+/*  margin-left: 50px;*/
+  width: 50%;
+  margin: 0 auto;
+}
+.selfie-title h4 {
+  font-size: 40px;
+  margin-bottom: 1%;
+}
+/******     MTURK    ******/
+.test-mturk {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  top: 50%;
+  background-image: url(../img/experiment-mturk.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(100% 100%, 50% 0, 0 100%);
+  clip-path: polygon(100% 100%, 50% 0, 0 100%);
+}
+.test-mturk-cover {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  top: 50%;
+  background-color: rgba(0,0,255,0.4);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(100% 100%, 50% 0, 0 100%);
+  clip-path: polygon(100% 100%, 50% 0, 0 100%);
+}
+.test-mturk-cover:hover {
+  background-color: rgba(0,0,255,0.7);
+}
+.mturk-title {
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  position: relative;
+  transform: translateY(100%); /*deviating from pulseband (transform:translateY(50%))*/
+}
+.mturk-title h4 {
+  font-size: 40px;
+  margin-bottom: 1%;
+}
+
+/************* FOOTER *************/
+.footer {
+  text-align: center;
+  background-color: gray;
+  color: white;
+  height: 18vh;
+}
+.footer ul {
+  padding: 2% 0%;
+}
+.footer li {
+  display: inline-block;
+  margin: 0% 1%;
+}
+.footer p {
+  padding-bottom: 2%;
+}

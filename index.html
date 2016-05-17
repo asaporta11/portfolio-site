@@ -1,38 +1,52 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Signika:400,300,600,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/animate.css">
 		<meta charset="UTF-8"/> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Arielle Saporta's Portfolio</title>
 		<link rel="stylesheet" href="css/reset.css">
-		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/main.css">
+		<!-- Because couldn't figure out how to get computer to watch main.css file -->
+		<!-- <link rel="stylesheet" href="css/main.css"> -->
+		<link rel="stylesheet" href="css/direct-manip-main.css">
 		<script src="https://code.jquery.com/jquery-git.js"></script>
 		<script src="http://modernizr.com/downloads/modernizr-latest.js" type="text/javascript"></script>
-
 	</head>
 	<body>
+		
 		<div class="title-page">
-			<h1>Arielle Saporta</h1>
-			<h2>UX Designer and Front-End Developer</h2>
+			<div class="title-frame">
+				<h1>Arielle Saporta</h1>
+				<h2>UX Designer and Front-End Developer</h2>
+				<div class="circ-btn"><div class="round-btn-circ"><i class="fa fa-angle-down fa-4x animated infinite tada" id="down-btn"></i><a href="www.nyt.com" class="round-btn"></a></div></div>
+			<!-- 			<div class="hex-btn"></div> -->
+			</div>
 		</div>
-		<div class="about">
-			<section>
+		<nav class="main-nav">
+			<ul>
+				<li><a href="#about">ABOUT</a></li>
+				<li><a href="#projects">PROJECTS</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+			</ul>
+		</nav>
+		<div class="main-container"> <!-- contains everything below -->
+		<div class="about" id="about-section">
+			<section id="about">
 				<h3>About</h3>
+					<div class="pic-container"><img src="img/as-pic.JPG" alt=""></div>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis anim id est laborum.
-					</p>
+					</p><br>
 					<p>
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis anim id est laborum.
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis anim id est laborum.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis anim id est laborum.
 					</p>
-				<button>
-					Resume
-				</button>
+				<div class="border-res-btn"><div class="res-btn"><a href="#">Resume</a></div></div>
 			</section>
 		</div>	
-		<div class="projects">
+<!-- 		<div class="projects">
 			<section>
 				<div class="pulseband" id="triangle-down">
 					<div class="pulseband-desc">
@@ -67,15 +81,62 @@
 					</p>
 				</div>
 			</section>
-		</div>
-		<section>
-			<h3>Keep In Touch</h3>
+		</div> -->
+		<section id="projects" class="projects-section">
+			<h3>Projects</h3>
+			<div class="projects-wrapper">
+				<div class="test-spotify" data-sr="enter left over 2s move 100px">
+				</div>
+				<div class="test-spotify-cover" data-sr="enter left over 2s move 100px">
+					<div class="spotify-title">
+						<h4>Spotify</h4>
+						<p>Front-End Developer</p>
+					</div>
+				</div>
+				<div class="test-pulseband" data-sr="enter top over 2s move 100px">
+				</div>	
+				<div class="test-pulseband-cover" data-sr="enter top over 2s move 100px">
+					<div class="pulseband-title">
+						<h4>Pulseband</h4>
+						<p>Front-End Developer <br>UX Designer <br>Product Designer</p>
+					</div>
+					<a href="pulseband.html"></a>
+				</div>
+				<div class="test-selfie" data-sr="enter right over 2s move 100px">
+				</div>
+				<div class="test-selfie-cover" data-sr="enter right over 2s move 100px">
+					<div class="selfie-title">
+						<h4>Selfie</h4>
+						<p>Front-End Developer</p>
+					</div>
+				</div>			
+				<div class="test-mturk" data-sr="enter bottom over 2s move 100px">
+				</div>
+				<div class="test-mturk-cover" data-sr="enter bottom over 2s move 100px">
+					<div class="mturk-title">
+						<h4>Psychology</h4>
+						<p>Psychology Researcher <br>Experiment Design <br>Front-End Developer <br>Analytics</p>
+					</div>
+				</div>
+			</div>
 		</section>
-
-
+		<section id="contact">
+			<div class="footer">
+				<ul class="contact">
+					<li><i class="fa fa-envelope fa-2x"></i></li>
+					<li><i class="fa fa-github fa-2x"></i></li>
+					<li><i class="fa fa-linkedin-square fa-2x"></i></li>
+				</ul>
+				<p>Thought through with my brain and coded with my hands <br> Arielle Saporta &copy;2016</p>
+			</div>	
+		</section>
+		</div> <!-- div from main container -->
 		
 
   		<script src="http://d3js.org/d3.v3.min.js"></script>
+  		<script src='js/scrollReveal.min.js'></script>
+  		<script src="js/behaviors.js"></script>
+
 		<!--<script src ="js/vendors/d3.chart.min.js"></script>
 		<script src="js/config.js"></script>
 		<script src="js/events.js"></script>  		
