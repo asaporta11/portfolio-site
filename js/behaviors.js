@@ -17,6 +17,7 @@ $(window).scroll(function() {
 }); 
 
 //Down button press and scroll to About
+//how can I do this for other pages? just name #down-btn smth different for each page?
 $('#down-btn').click(function() {
 	var offset = -95; //offset XXpx
 	$('html, body').animate({
@@ -34,6 +35,7 @@ navElement.click(function(){
 });
 
 // Nav highlighting and scrolling on click of nav item
+// var aChildren = $('nav li').children();
 var aChildren = $('nav li').children();
 var aArray = [];
 var theID;
