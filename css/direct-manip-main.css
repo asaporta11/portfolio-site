@@ -133,6 +133,7 @@ div.main-container {
 }
 .nav-active {
   color: #3333CC;
+  background-color: #3333CC;
 }
 
 /************* TITLE *************/
@@ -332,6 +333,9 @@ div.main-container {
   margin: 1%;
 }
 
+.projects-wrapper div div h4 {
+  text-transform: uppercase;
+}
 /******     PULSEBAND    ******/
 .test-pulseband {
   position: absolute;
@@ -361,7 +365,7 @@ div.main-container {
   text-align: center;
   color: white;
   position: relative;
-  transform: translateY(100%);
+  transform: translateY(100%); /*transform: translateY(100%);*/
 }
 .pulseband-title h4 {
   font-size: 40px;
@@ -399,9 +403,9 @@ div.main-container {
   color: white;
   position: relative;
   transform: translateY(45vh);
-/*  margin-left: 50px;*/
-  width: 50%;
-  margin: 0 auto;
+  margin-right: 10vw;
+/*  width: 50%;*/
+/*  margin: 0 auto;*/
 }
 .spotify-title h4 {
   font-size: 40px;
@@ -414,7 +418,7 @@ div.main-container {
   left: 50%;
   width: 50vw;
   height: 100vh;
-  background-image: url(../img/social-selfie.jpeg);
+  background-image: url(../img/selfie-hero.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
@@ -441,9 +445,9 @@ div.main-container {
   color: white;
   position: relative;
   transform: translateY(45vh);
-/*  margin-left: 50px;*/
+  margin-left: 15vw;
   width: 50%;
-  margin: 0 auto;
+/*  margin: 0 auto;*/
 }
 .selfie-title h4 {
   font-size: 40px;
@@ -480,7 +484,7 @@ div.main-container {
   text-align: center;
   color: white;
   position: relative;
-  transform: translateY(100%); /*deviating from pulseband (transform:translateY(50%))*/
+  transform: translateY(25vh); /*transform: translateY(100%);*//*deviating from pulseband (transform:translateY(50%))*/
 }
 .mturk-title h4 {
   font-size: 40px;
@@ -548,9 +552,30 @@ ul.contact {
   .about p {
     font-size: 16px;
   }
+  div.spotify-title h4, div.pulseband-title h4, div.selfie-title h4, div.mturk-title h4 {
+    font-size: 32px;
+  }
+  div.spotify-title p, div.pulseband-title p, div.selfie-title p, div.mturk-title p {
+    font-size: 16px;
+  }
 }
 
-@media screen and (max-width: 335px) {
+@media screen and (max-height: 560px) {
+  div.spotify-title p, div.pulseband-title p, div.selfie-title p, div.mturk-title p {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .pulseband-title {
+    transform: translateY(70%);
+  }
+  .mturk-title {
+    transform: translateY(30vh);
+  }
+}
+
+@media screen and (max-width: 340px) {
   .title-page h1 {
     font-size: 56px;
   }
@@ -576,15 +601,110 @@ ul.contact {
   }
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 300px) {
   .title-page h1 {
     font-size: 46px;
   }
   .title-page h2 {
     font-size: 20px;
   }
+  .test-pulseband, .test-spotify, .test-mturk, .test-selfie {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    height: 25%;
+    left: 0px;
+    transform: none;
+  }
+  .test-pulseband-cover, .test-spotify-cover, .test-mturk-cover, .test-selfie-cover {
+    position: absolute;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    height: 25%;
+    left: 0px;
+    transform: none;
+  }
+  .pulseband-title, .spotify-title, .mturk-title, .selfie-title {
+    margin: 0 auto; 
+  }
 }
 
 
 
+/******     SELFIE    ******/
+/*.test-selfie {
+  position: absolute;
+  left: 50%;
+  width: 50vw;
+  height: 100vh;
+  background-image: url(../img/selfie-hero.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+.test-selfie-cover {
+  position: absolute;
+  left: 50%;
+  width: 50vw;
+  height: 100vh;
+  background-color: rgba(24, 8, 76, 0.45);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+.test-selfie-cover:hover {
+  background-color: rgba(24, 8, 76, 0.7); /*rgba(13, 6, 40, 0.9)*/
+}
+/*trying to figure out what's going on here*/
+/*.selfie-title {
+  font-size: 18px;
+  text-align: center; 
+  color: white;
+  position: relative;
+  transform: translateY(45vh);
+  margin-left: 15vw;
+  width: 50%;
+/*  margin: 0 auto;*/
+}
+/*.selfie-title h4 {
+  font-size: 40px;
+  margin-bottom: 1%;
+}*/
+/*.test-pulseband {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  background-image: url(../img/pulseband-hero.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}*/
+/*.test-pulseband-cover {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  background-color: rgba(2, 2, 2, .75); rgba(7, 190, 212, 0.5)  rgba(224, 43, 99, .4)
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}*/
+/*.test-pulseband-cover:hover {
+  background-color: rgba(2, 2, 2, .45);
+}*/
+/*.pulseband-title {
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  position: relative;
+  transform: translateY(100%); /*transform: translateY(100%);
+}*/
+/*.pulseband-title h4 {
+  font-size: 40px;
+  margin-bottom: 1%;
+}*/
 
