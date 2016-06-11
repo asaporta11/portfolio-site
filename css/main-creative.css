@@ -243,6 +243,14 @@ a:visited {
   color: #3333CC;
 }
 
+section img.image {
+  width: 80%;
+}
+
+img.pinecrabsauce {
+  width: 30%;
+}
+
 /************* NAV *************/
 /*nav based on https://teamtreehouse.com/community/forum-tip-create-a-sticky-navigation-with-css-and-jquery-2*/
 /* Same info as above still stands*/

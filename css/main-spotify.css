@@ -244,6 +244,9 @@ a:visited {
   color: #3333CC;
 }
 
+section img.image {
+  width: 60%;
+}
 /************* NAV *************/
 /*nav based on https://teamtreehouse.com/community/forum-tip-create-a-sticky-navigation-with-css-and-jquery-2*/
 /* Same info as above still stands*/
@@ -525,7 +528,7 @@ ul.contact {
   }
 
 /*      IMAGES      */
-  .build img, .define div img, .learning-curve img {
+  .build img, .learning-curve img {
     width: 90%;
     margin-top: 5%;
   }

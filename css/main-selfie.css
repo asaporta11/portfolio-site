@@ -134,6 +134,9 @@ div.main-container {
   color: #3333CC;
 }
 
+.product-design img.gif-style {
+  width: 30%;
+}
 
 /************* ADDITIONS TO CSS *************/
 /************* TITLE *************/
@@ -224,7 +227,7 @@ div.main-container {
   margin-top: 3%;
 }
 .subs-pg {
-  margin-top: 1%;
+  margin-top: 2%;
 }
 img.annotate-dot {
   width: 20px;
@@ -242,6 +245,24 @@ a:link { /* unvisited link */
 a:visited { 
   color: #3333CC;
 }
+
+div.multipic-container {
+  width: 100%;
+  text-align: center;
+}
+.multipic-container img.multipic {
+  width: 20%;
+  margin: 0% 3%;
+  margin-top: 3%;
+  display: inline-block;
+}
+/*.multipic-container img.multipic {
+  width: 30%;
+  margin: 0% 3%;
+  margin-top: 3%;
+  display: inline-block;
+}*/
+
 
 /************* NAV *************/
 /*nav based on https://teamtreehouse.com/community/forum-tip-create-a-sticky-navigation-with-css-and-jquery-2*/

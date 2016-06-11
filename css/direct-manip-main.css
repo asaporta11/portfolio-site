@@ -287,7 +287,40 @@ div.main-container {
 }
 
 /*    Resume button    */ 
-.res-btn {
+.btn {
+  font-family: 'Signika', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  width: 150px;
+  display: block;
+  text-align: center;
+  border: 10px solid white;
+  text-decoration: none;
+  background-color: #07bed4;
+  color: white;
+  padding: 12px 18px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+.btn:before {
+  content: " ";
+  position: absolute;
+  top: -6px;
+  left: -7px;
+  right: -7px;
+  bottom: -6px;
+  border: 1px solid #07bed4;
+}
+.btn:hover {
+  background-color: #3333CC;
+/*  border: 1px solid #3333CC;*/
+}
+.btn:before:hover {
+  border: 1px solid #3333CC;
+}
+
+/*.res-btn {
   text-align: center;
   position: relative;
   margin-top: 16px;
@@ -321,7 +354,7 @@ div.main-container {
   position: absolute;
   width: 100px;
   left: 40%;
-}
+}*/
 
 
 /************* PROJECTS *************/
