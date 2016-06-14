@@ -134,9 +134,7 @@ div.main-container {
   color: #3333CC;
 }
 
-.product-design img.gif-style {
-  width: 30%;
-}
+
 
 /************* ADDITIONS TO CSS *************/
 /************* TITLE *************/
@@ -256,6 +254,10 @@ div.multipic-container {
   margin-top: 3%;
   display: inline-block;
 }
+.product-design img.gif-style {
+  width: 30%;
+}
+
 /*.multipic-container img.multipic {
   width: 30%;
   margin: 0% 3%;

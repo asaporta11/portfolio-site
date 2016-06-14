@@ -81,26 +81,46 @@ p.caption-text {
 
 /************* *************    PAGE    ************* *************/
 /************* *************    PULSEBAND    ************* *************/
-
-/************* Page rules *************/
-.challenge, .evaluate, .product-design, .product-development {
+/*.proj-text, .challenge, .evaluate, .product-design, .product-development {
   position: relative;
 }
-.product-design h4, .evaluate h4, .product-development h4 {
+.proj-text h4, .product-design h4, .evaluate h4, .product-development h4 {
   color: #07bed4;
   font-size: 32px;
   margin-top: 3%;
   text-align: left;
 }
-.challenge h3, .evaluate h3, .product-development h3 {
+.proj-text h3, .challenge h3, .evaluate h3, .product-development h3 {
+  color: black;
+  font-size: 52px;
+  margin-bottom: 3%
+}*/
+/*.product-design h5 {
+  color: #000;
+}*/
+/*.proj-text img, .product-design img, .evaluate div img, .product-development img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 3%;
+}*/
+/*AS-CHANGED*/
+/************* Page rules *************/
+.proj-text {
+  position: relative;
+}
+.proj-text h4 {
+  color: #07bed4;
+  font-size: 32px;
+  margin-top: 3%;
+  text-align: left;
+}
+.proj-text h3 {
   color: black;
   font-size: 52px;
   margin-bottom: 3%
 }
-.product-design h5 {
-  color: #000;
-}
-.product-design img, .evaluate div img, .product-development img {
+.proj-text img {
   display: block;
   margin: 0 auto;
   width: 80%;
@@ -118,12 +138,37 @@ img.annotate-dot {
 .contact {
   margin-top: 5%;
 }
-
 a:link { /* unvisited link */
   color: #07bed4;
 }
 a:visited { 
   color: #3333CC;
+}
+
+/***** TITLE (page rules - all title pages) *****/
+.proj-title-page h1 {
+  text-transform: uppercase; 
+  color: #fff;
+  padding-top: 15vh;
+  padding-bottom: 2%;
+}
+.proj-title-page h3 {
+  font-size: 38px;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 0%;
+}
+.proj-title-page h5 {
+  padding: 0% 20%;
+  padding-bottom: 1%;
+  font-size: 30px;  
+}
+.title-text {
+  font-family: 'Work Sans', sans-serif;
+  color: #fff;
+  font-weight: 300; 
+  margin-top: 0%;
 }
 
 /************* NAV *************/
@@ -179,6 +224,52 @@ body {
 
 
 /************* TITLE *************/
+/*.pulseband-title-page h1 {
+  text-transform: uppercase; 
+  color: #fff;
+  padding-top: 15vh;
+  padding-bottom: 2%;
+}*/
+/*.pulseband-title-page h3 {
+  font-size: 38px;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 0%;
+}*/
+/*.pulseband-title-page h5 {
+  padding: 0% 20%;
+  padding-bottom: 1%;
+  font-size: 30px;
+}*/
+
+/*MOVED TO PAGE RULES*/
+/*.title-page h1 {
+  text-transform: uppercase; 
+  color: #fff;
+  padding-top: 15vh;
+  padding-bottom: 2%;
+}
+.title-page h3 {
+  font-size: 38px;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 0%;
+}
+.title-page h5 {
+  padding: 0% 20%;
+  padding-bottom: 1%;
+  font-size: 30px;  
+}
+.title-text {
+  font-family: 'Work Sans', sans-serif;
+  color: #fff;
+  font-weight: 300; 
+  margin-top: 0%;
+}*/
+
+/*AS-CHANGED*/
 .pulseband-title-page {
   width: 100vw;
   height: 100vh;
@@ -193,30 +284,8 @@ body {
   width: 100vw;
   background-color: rgba(24, 8, 76, 0.33); /*rgba(24, 8, 76, 0.4)*/
 }
-.pulseband-title-page h1 {
-  text-transform: uppercase; 
-  color: #fff;
-  padding-top: 15vh;
-  padding-bottom: 2%;
-}
-.pulseband-title-page h3 {
-  font-size: 38px;
-  color: #fff;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  margin-bottom: 0%;
-}
-.pulseband-title-page h5 {
-  padding: 0% 20%;
-  padding-bottom: 1%;
-  font-size: 30px;
-}
-.title-text {
-  font-family: 'Work Sans', sans-serif;
-  color: #fff;
-  font-weight: 300; 
-  margin-top: 0%;
-}
+
+
 
 
 /************* CHALLENGE *************/
@@ -393,6 +462,18 @@ ul.contact {
   }
 }
 
+/*AS-CHANGED*/
+/*  .proj-text h3, .challenge h3, .evaluate h3, .product-development h3 {
+  font-size: 48px;
+  margin-bottom: 5%
+  }*/
+
+/*      IMAGES      */
+  /*.proj-text img, .product-design img, .evaluate div img, .product-development img {
+    width: 90%;
+    margin-top: 5%;
+  }*/
+
 @media screen and (max-width: 445px) {
   h5.title-text {
     font-size: 22px;
@@ -401,13 +482,13 @@ ul.contact {
   h1 {
     font-size: 48px;
   }
-  .challenge h3, .evaluate h3, .product-development h3 {
+  .proj-text h3 {
   font-size: 48px;
   margin-bottom: 5%
   }
 
 /*      IMAGES      */
-  .product-design img, .evaluate div img, .product-development img {
+  .proj-text img {
     width: 90%;
     margin-top: 5%;
   }
@@ -422,7 +503,7 @@ ul.contact {
   }
 
 /*      BUTTONS      */  
-  .fin-prod-btn {
+/*  .fin-prod-btn {
     margin-top: 15px;
   }
   .fin-prod-btn a {
@@ -439,9 +520,9 @@ ul.contact {
   .btn-container {
     position: relative;
     height: 50px;
-  }
+  }*/
   /* GITHUB BTN */
-  .github-btn {
+/*  .github-btn {
     margin-top: 15px;
   }
   .github-btn a {
@@ -452,8 +533,19 @@ ul.contact {
   .border-github-btn {
     position: absolute;
     right: 5%;
-  }
+  }*/
 }
+
+/*AS-CHANGED*/
+/*  .proj-text h3, .product-design h3, .evaluate h3, .product-development h3 {
+    margin-top: 20%;
+    font-size: 42px;
+  }
+  .proj-text h4, .product-design h4, .evaluate h4, .product-development h4 {
+    font-size: 32px;
+    margin-top: 15%;
+    margin-bottom: 1%;
+  }*/
 
 @media screen and (max-width: 400px) {
   
@@ -465,7 +557,7 @@ ul.contact {
   h1 {
     font-size: 44px;
   }
-  .product-design h3, .evaluate h3, .product-development h3 {
+  .proj-text h3 {
     margin-top: 20%;
     font-size: 42px;
   }
@@ -473,7 +565,7 @@ ul.contact {
     margin-top: 0%;
     font-size: 30px;
   }
-  .product-design h4, .evaluate h4, .product-development h4 {
+  .proj-text h4 {
     font-size: 32px;
     margin-top: 15%;
     margin-bottom: 1%;
@@ -519,7 +611,7 @@ ul.contact {
   }
 
 /*     BUTTONS     */  
-  .fin-prod-btn {
+/*  .fin-prod-btn {
     margin-top: 15px;
   }
   .fin-prod-btn a {
@@ -538,9 +630,9 @@ ul.contact {
     position: relative;
     height: 120px;
     margin-top: 5%;
-  }
+  }*/
   /* GITHUB BTN */
-  .github-btn {
+/*  .github-btn {
     margin-top: 15px;
   }
   .github-btn a {
@@ -553,7 +645,7 @@ ul.contact {
     top: 70px;
     right: 50%;
     margin-right: -66px;
-  }
+  }*/
 }
 
 

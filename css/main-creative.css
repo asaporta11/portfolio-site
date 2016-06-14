@@ -91,7 +91,7 @@ body {
   margin: 0;
   padding-top: 100vh;
 }
-.project-title-page {
+.proj-title-page {
   background: blue;
   height: 600px;
 }
@@ -110,7 +110,7 @@ div.main-container {
   padding-top: 40px; /* was 110px and I changed to 10... before was this: padding: 110px 50px 50px;*/ /*top LR bottom*/
   margin-bottom: -80px; /*because .main-nav height is 80px*/
 }
-.project-title-page, .main-nav-scrolled {
+.proj-title-page, .main-nav-scrolled {
   position: fixed;
   top: 0;
   width: 100%
@@ -258,7 +258,7 @@ body {
   margin: 0;
   padding-top: 100vh;
 }
-.project-title-page {
+.proj-title-page {
   background: blue;
   height: 600px;
 }
@@ -277,7 +277,7 @@ body {
   padding-top: 110px; /*padding: 110px 50px 50px;*/ /*top LR bottom*/
   margin-bottom: -80px; /*because .main-nav height is 80px*/
 }
-.project-title-page, .main-nav-scrolled {
+.proj-title-page, .main-nav-scrolled {
   position: fixed;
   top: 0;
   width: 100%
@@ -304,7 +304,7 @@ body {
 
 
 /************* TITLE *************/
-.project-title-page {
+.proj-title-page {
   width: 100vw;
   height: 100vh;
   background: url(../img/creative-hero.jpeg);
@@ -318,20 +318,20 @@ body {
   width: 100vw;
   background-color: rgba(24, 8, 76, 0.45); /*rgba(24, 8, 76, 0.4)*/
 }
-.project-title-page h1 {
+.proj-title-page h1 {
   text-transform: uppercase; 
   color: #fff;
   padding-top: 15vh;
   padding-bottom: 2%;
 }
-.project-title-page h3 {
+.proj-title-page h3 {
   font-size: 38px;
   color: #fff;
   padding-top: 20px;
   padding-bottom: 10px;
   margin-bottom: 0%;
 }
-.project-title-page h5 {
+.proj-title-page h5 {
   padding: 0% 20%;
   padding-bottom: 1%;
   font-size: 30px;
