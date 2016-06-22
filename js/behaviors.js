@@ -19,7 +19,7 @@ $(window).scroll(function() {
 //Down button press and scroll to About
 //how can I do this for other pages? just name #down-btn smth different for each page?
 $('#down-btn').click(function() {
-	var offset = -95; //offset XXpx
+	var offset = -95; //offset XXpx - need to change this for responsive?
 	$('html, body').animate({
 		scrollTop: $('#about-section').offset().top + offset
 	}, 1000);
@@ -75,6 +75,33 @@ $(window).scroll(function() {
 	}
 });
 
+// slick carousel 
+$(document).ready(function(){
+  $('.single-items').slick({
+  	singleitem: true,
+  	dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 1000,
+    autoplay: true
+  });
+});
+
+// $(document).ready(function(){
+//   $('.single-item').slick({
+//   	singleitem: true
+//     // arrows: true
+//   });
+// });
+
+// function initCarousel(){
+// 	$('.single-item').slick({
+// 		dots: true,
+// 		prevArrow: '<div class="slick-prev"><i class="fa fa-chevron-left"></i></div>',
+// 		nextArrow: '<div class="slick-next"><i class="fa fa-chevron-right"></i></div>',
+// 	});
+// }
+// initCarousel;
 
 
 

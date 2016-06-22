@@ -10,7 +10,7 @@ body {
 
 h1, h2 {
   font-family: 'Signika', sans-serif;
-  font-size: 76px;
+  font-size: 66px;
   font-weight: 500;
   text-align: center;
   text-transform: uppercase;
@@ -19,7 +19,7 @@ h1, h2 {
 h3 {
   font-family: 'Signika', sans-serif;
   font-weight: 500;
-  font-size: 52px;
+  font-size: 38px;
   color: black;
   margin-bottom: 3%;
   text-align: center;
@@ -40,6 +40,7 @@ h5 {
   font-weight: 400;
   margin-bottom: 1%;
   margin-top: 3%;
+  color: #3333CC;
 }
 
 h6{
@@ -54,6 +55,7 @@ h6{
 
 p {
   line-height: 120%;
+  font-size: 15px;
 /*  margin: 2% 0%; */
 }
 
@@ -64,9 +66,10 @@ section {
 
 p span {
   font-family:'Signika', sans-serif;
-  font-size: 17px;
-  font-weight: 400;
-  color: #3333CC;
+  /*font-family: 'Work Sans', sans-serif;*/
+  font-size: 16px;
+  font-weight: 600;
+  color: #5f5f5f; /*#3333CC*/
 }
 p.caption-text {
   font-size: 14px;
@@ -121,8 +124,8 @@ div.main-container {
 .main-nav ul li {
   float: none;
   display: inline-block;
-  padding-top: 20px;
-  padding-right: 30px;
+  padding-top: 22px;
+  padding-right: 10px;
 }
 .main-nav ul li a {
   text-decoration: none;
@@ -135,6 +138,7 @@ div.main-container {
   color: #3333CC;
   background-color: #3333CC;
 }
+
 
 /************* TITLE *************/
 .title-page {
@@ -209,7 +213,9 @@ div.main-container {
   left: 0px;
   color: red; 
 }
-
+.proj-text {
+  margin-bottom: 10%;
+}
 /************* ADDITIONS TO CSS *************/
 /************* TITLE *************/
 .title-frame {
@@ -287,23 +293,24 @@ div.main-container {
 }
 
 /*    Resume button    */ 
-.btn {
+#btn {
   font-family: 'Signika', sans-serif;
   font-weight: 500;
   font-size: 18px;
   position: relative;
-  width: 150px;
+  width: 160px;
   display: block;
   text-align: center;
   border: 10px solid white;
   text-decoration: none;
   background-color: #07bed4;
-  color: white;
   padding: 12px 18px;
   margin: 0 auto;
   margin-top: 10%;
+  color: #fff;
 }
-.btn:before {
+
+#btn:before {
   content: " ";
   position: absolute;
   top: -6px;
@@ -312,50 +319,27 @@ div.main-container {
   bottom: -6px;
   border: 1px solid #07bed4;
 }
-.btn:hover {
+#btn:hover {
   background-color: #3333CC;
 /*  border: 1px solid #3333CC;*/
 }
-.btn:before:hover {
+#btn:before:hover {
   border: 1px solid #3333CC;
 }
-
-/*.res-btn {
+div.btn-container {
+  width: 100%;
   text-align: center;
-  position: relative;
-  margin-top: 16px;
 }
-.res-btn a {
-  background-color: #07bed4;
-  text-decoration: none;
+a#btn {
   color: #fff;
-  padding: 8px 25px;
-  margin: 5px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  transition: .3s ease-out;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0% 10%;
+  margin-top: 0%;
 }
-.res-btn a:hover {
-  background-color: #3333CC;
+a#btn:visited {
+  color: #fff;
 }
-.border-res-btn {
-  border: 1px solid #07bed4;
-  position: absolute;
-  height: 50px;
-  margin: 20px;
-}
-.border-res-btn:hover {
-  border: 1px solid #3333CC;
-}
-.about button {
-  margin: auto; 
-}
-.res-btn-container {
-  position: absolute;
-  width: 100px;
-  left: 40%;
-}*/
-
 
 /************* PROJECTS *************/
 .projects-wrapper {
@@ -404,7 +388,9 @@ div.main-container {
   font-size: 40px;
   margin-bottom: 1%;
 }
-
+.evaluate p.subs-pg {
+  margin-top: 5px;
+}
 /******     SPOTIFY    ******/
 .test-spotify {
   position: absolute;
@@ -451,7 +437,7 @@ div.main-container {
   left: 50%;
   width: 50vw;
   height: 100vh;
-  background-image: url(../img/selfie-hero.jpeg);
+  background-image: url(../img/selfie-hero-2.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
@@ -547,8 +533,8 @@ ul.contact {
 
 
 
-/**************************************    RESPONSIVE    **************************************/
-/**************************************    RESPONSIVE    **************************************/
+/***********************    RESPONSIVE - Index  ***********************/
+
 @media screen and (max-width: 770px) {
   .title-page h1 {
     font-size: 66px;
@@ -664,82 +650,6 @@ ul.contact {
 }
 
 
-
-/******     SELFIE    ******/
-/*.test-selfie {
-  position: absolute;
-  left: 50%;
-  width: 50vw;
-  height: 100vh;
-  background-image: url(../img/selfie-hero.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
-  clip-path: polygon(100% 0, 0 50%, 100% 100%);
-}
-.test-selfie-cover {
-  position: absolute;
-  left: 50%;
-  width: 50vw;
-  height: 100vh;
-  background-color: rgba(24, 8, 76, 0.45);
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
-  clip-path: polygon(100% 0, 0 50%, 100% 100%);
-}
-.test-selfie-cover:hover {
-  background-color: rgba(24, 8, 76, 0.7); /*rgba(13, 6, 40, 0.9)*/
-}
-/*trying to figure out what's going on here*/
-/*.selfie-title {
-  font-size: 18px;
-  text-align: center; 
-  color: white;
-  position: relative;
-  transform: translateY(45vh);
-  margin-left: 15vw;
-  width: 50%;
-/*  margin: 0 auto;*/
-}
-/*.selfie-title h4 {
-  font-size: 40px;
-  margin-bottom: 1%;
-}*/
-/*.test-pulseband {
-  position: absolute;
-  width: 100vw;
-  height: 50vh;
-  background-image: url(../img/pulseband-hero.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-  clip-path: polygon(0 0, 50% 100%, 100% 0);
-}*/
-/*.test-pulseband-cover {
-  position: absolute;
-  width: 100vw;
-  height: 50vh;
-  background-color: rgba(2, 2, 2, .75); rgba(7, 190, 212, 0.5)  rgba(224, 43, 99, .4)
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-  clip-path: polygon(0 0, 50% 100%, 100% 0);
-}*/
-/*.test-pulseband-cover:hover {
-  background-color: rgba(2, 2, 2, .45);
-}*/
-/*.pulseband-title {
-  font-size: 18px;
-  text-align: center;
-  color: white;
-  position: relative;
-  transform: translateY(100%); /*transform: translateY(100%);
-}*/
-/*.pulseband-title h4 {
-  font-size: 40px;
-  margin-bottom: 1%;
-}*/
 /************************     ALL PROJECT PAGES          ************************/
 /************* Page rules *************/
 .proj-text {
@@ -759,23 +669,33 @@ ul.contact {
 .proj-text img {
   display: block;
   margin: 0 auto;
-  width: 80%;
+/*  width: 80%;*/
   margin-top: 3%;
 }
 .subs-pg {
   margin-top: 1%;
 }
 img.annotate-dot {
-  width: 20px;
+  width: 15px;
   display: inline;
   margin: 0px;
   margin-right: 5px;
+}
+ul.bullets li {
+  list-style: circle outside;
+}
+ul.bullets {
+  padding-left: 5%;
 }
 .contact {
   margin-top: 5%;
 }
 a:link { /* unvisited link */
+  text-decoration: none;
   color: #07bed4;
+}
+a:hover {
+  color: #3333CC;
 }
 a:visited { 
   color: #3333CC;
@@ -793,6 +713,26 @@ div.multipic-container {
 .proj-text img.gif-style {
   width: 30%;
 }
+img.vert-image {
+  width: 60%; 
+}
+img.horiz-image {
+  width: 90%;
+}
+img.carousel-image {
+  width: 100%;
+}
+.spot-build-image {
+  width: 40%;
+}
+img.annotate-dot {
+  width: 15px;
+  margin-right: 5px;
+  margin-top: 0px;
+}
+ul li {
+  padding: 4px 0px;
+}
 
 /***** TITLE (page rules - all title pages) *****/
 .proj-title-page h1 {
@@ -802,7 +742,7 @@ div.multipic-container {
   padding-bottom: 2%;
 }
 .proj-title-page h3 {
-  font-size: 38px;
+  font-size: 32px;
   color: #fff;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -811,7 +751,7 @@ div.multipic-container {
 .proj-title-page h5 {
   padding: 0% 20%;
   padding-bottom: 1%;
-  font-size: 30px;  
+  font-size: 20px;  
 }
 .title-text {
   font-family: 'Work Sans', sans-serif;
@@ -829,6 +769,7 @@ div.multipic-container {
 }
 .footer ul {
   padding: 2% 0%;
+  margin-top: 0;
 }
 .footer li {
   display: inline-block;
@@ -914,6 +855,9 @@ img.placeholder-img {
   p.subs-pg {
     margin-top: 3%;
   }
+  .proj-text img.gif-style {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 515px) {
@@ -950,11 +894,14 @@ img.placeholder-img {
     margin: 0px;
     margin-right: 5px;
   }
+  .proj-text img.gif-style {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 400px) {
   
-/*    PAGE RULES     */
+  /*    PAGE RULES     */
   section {
     margin: 0% 5%;
     margin-top: 4%;
@@ -963,16 +910,16 @@ img.placeholder-img {
     font-size: 44px;
   }
   .proj-text h3 {
-    margin-top: 20%;
-    font-size: 42px;
+    margin-top: 15%;
+    font-size: 36px;
   }
   .pulseband-title-frame h3 {
     margin-top: 0%;
     font-size: 30px;
   }
   .proj-text h4 {
-    font-size: 32px;
-    margin-top: 15%;
+    font-size: 26px;
+    margin-top: 8%;
     margin-bottom: 1%;
   }
   h5.title-text {
@@ -991,31 +938,19 @@ img.placeholder-img {
   }
   .contact {
   margin-top: 15%;
-}
-
-/*     NAV       */
-.main-nav ul li a {
-  font-size: 16px;
-} 
-.main-nav ul li {
-  float: none;
-  display: inline-block;
-  padding-top: 22px;
-  padding-right: 10px ;
-}
-
-/*     IMAGES     */
-  /*this isn't totally working... don't know why*/
-  .proj-text img/*, .evaluate div img, .product-development img */{
-    width: 95%;
-    margin-top: 10%;
   }
-  img.annotate-dot {
-    width: 15px;
-    margin-right: 5px;
-    margin-top: 0px;
+  .proj-text img.gif-style {
+    width: 80%;
+  }
+  .multipic-container img.multipic {
+    width: 40%;
+  }
+  img.vert-image {
+    width: 100%;
   }
 }
+
+
 
 
 
@@ -1051,6 +986,16 @@ img.placeholder-img {
 img.pinecrabsauce {
   width: 40%;
 }
+
+/* slick carousel */
+/*.single-prev:before, .slick-next:before{
+  color: black !important;
+}
+button.slick-prev.slick-arrow:before {
+  margin-left: 40px;
+  color: black !important;
+}*/
+
 
 /***ADDITIONS TO TITLE (must be below projects) ***/
 .creative-title-frame {
@@ -1118,7 +1063,7 @@ img.pinecrabsauce {
 .selfie-title-page {
   width: 100vw;
   height: 100vh;
-  background: url(../img/spotify-hero.jpeg);
+  background: url(../img/selfie-hero-2.jpeg);
   background-size: cover;
   color: #fff;
   text-align: center; 
@@ -1127,7 +1072,7 @@ img.pinecrabsauce {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(24, 8, 76, 0.5); /*rgba(24, 8, 76, 0.4)*/
+  background-color: rgba(24, 8, 76, 0.7); /*rgba(24, 8, 76, 0.4)*/
 }
 
 /*** PROJECT  ***/
