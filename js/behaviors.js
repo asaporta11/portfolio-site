@@ -19,7 +19,7 @@ $(window).scroll(function() {
 //Down button press and scroll to About
 //how can I do this for other pages? just name #down-btn smth different for each page?
 $('#down-btn').click(function() {
-	var offset = -95; //offset XXpx - need to change this for responsive?
+	var offset = -120; //offset XXpx - need to change this for responsive?
 	$('html, body').animate({
 		scrollTop: $('#about-section').offset().top + offset
 	}, 1000);
@@ -30,7 +30,7 @@ var navElement = $('.main-nav a ');
 navElement.click(function(){
 	$('html, body').animate({
 		scrollTop: $( $.attr(this, 'href')).offset().top
-	}, 2000);
+	}, 1000);
 	return false; 
 });
 

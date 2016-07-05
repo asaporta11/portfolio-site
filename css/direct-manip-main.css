@@ -127,7 +127,7 @@ div.main-container {
   padding-top: 22px;
   padding-right: 10px;
 }
-.main-nav a {
+.main-nav ul li a {
   text-decoration: none;
   font-weight: 600;
   font-family: 'Signika', sans-serif;
@@ -135,13 +135,8 @@ div.main-container {
   color: #fff;
 }
 
-/*not working*/
-.main-nav ul li a:active {
-/*  color: green;
-  background-color: blue;*/
-}
 .main-nav a.nav-active {
-  color: yellow;
+  color: #3333CC;
 }
 
 
@@ -346,8 +341,12 @@ a#btn {
 a#btn:visited {
   color: #fff;
 }
+.res-btn-container a#btn{
+  display: block;
+  margin: 5% auto;
+}
 
-/************* PROJECTS *************/
+/************* PROJECTS /// FO REAL \\\ *************/
 .projects-wrapper {
   height: 100vh;
   position: relative;
@@ -355,10 +354,14 @@ a#btn:visited {
 .projects-section h3 {
   margin: 1%;
 }
-
 .projects-wrapper div div h4 {
   text-transform: uppercase;
 }
+
+
+
+/************* PROJECTS *************/
+
 /******     PULSEBAND    ******/
 .test-pulseband {
   position: absolute;
@@ -374,7 +377,7 @@ a#btn:visited {
   position: absolute;
   width: 100vw;
   height: 50vh;
-  background-color: rgba(2, 2, 2, .75); /*rgba(7, 190, 212, 0.5)  rgba(224, 43, 99, .4)*/
+  background-color: rgba(2, 2, 2, .35); /*rgba(7, 190, 212, 0.5)  rgba(224, 43, 99, .4)*/
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
@@ -421,7 +424,6 @@ a#btn:visited {
 .test-spotify-cover:hover {
   background-color: rgba(24, 8, 76, 0.60) ; /*rgba(13, 6, 40, 0.65)*/
 }
-/*trying to figure out what's going on here*/
 .spotify-title {
   font-size: 18px;
   text-align: center; 
@@ -429,8 +431,6 @@ a#btn:visited {
   position: relative;
   transform: translateY(45vh);
   margin-right: 10vw;
-/*  width: 50%;*/
-/*  margin: 0 auto;*/
 }
 .spotify-title h4 {
   font-size: 40px;
@@ -495,7 +495,7 @@ a#btn:visited {
   width: 100vw;
   height: 50vh;
   top: 50%;
-  background-color: rgba(2, 2, 2, .75);
+  background-color: rgba(2, 2, 2, .3);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(100% 100%, 50% 0, 0 100%);
@@ -515,6 +515,13 @@ a#btn:visited {
   font-size: 40px;
   margin-bottom: 1%;
 }
+
+
+
+
+
+
+
 
 /************* FOOTER *************/
 .footer {
@@ -536,6 +543,13 @@ a#btn:visited {
 ul.contact {
   padding-bottom: 5px;
 }
+.footer li a {
+  text-decoration: none;
+  color: white;
+}
+.footer ul li i:hover {
+  color: #3333CC
+}
 
 
 
@@ -554,6 +568,13 @@ ul.contact {
   }
   div.spotify-title {
     width: 70%;
+  }
+  .title-frame {
+  border: 1.5px solid white;
+  height: 100vh;
+  -ms-transform: scale(0.95,0.97); /* IE 9 */
+  -webkit-transform: scale(0.95,0.97); /* Safari */
+  transform: scale(0.95,0.97);
   }
 }
 
@@ -583,6 +604,13 @@ ul.contact {
   div.spotify-title p, div.pulseband-title p, div.selfie-title p, div.mturk-title p {
     font-size: 16px;
   }
+  .title-frame {
+  border: 1.5px solid white;
+  height: 100vh;
+  -ms-transform: scale(0.90,0.97); /* IE 9 */
+  -webkit-transform: scale(0.90,0.97); /* Safari */
+  transform: scale(0.90,0.97);
+  }
 }
 
 @media screen and (max-height: 560px) {
@@ -608,7 +636,7 @@ ul.contact {
     font-size: 22px;
   }
   .about section {
-    margin: 0% 2%;
+    margin: 5%;
     margin-top: 8%;
   }
   div.about {
@@ -639,25 +667,96 @@ ul.contact {
   div.about {
     padding: 20% 0%;
   }
-  .test-pulseband, .test-spotify, .test-mturk, .test-selfie {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    width: 100%;
-    height: 25%;
-    left: 0px;
-    transform: none;
+  .projects-section h2 {
+    font-size: 48px;
   }
-  .test-pulseband-cover, .test-spotify-cover, .test-mturk-cover, .test-selfie-cover {
+  .proj-container {
     position: absolute;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     width: 100%;
     height: 25%;
-    left: 0px;
-    transform: none;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  .pulseband-title, .spotify-title, .mturk-title, .selfie-title {
-    margin: 0 auto; 
+  .proj-cover {
+    position: relative;
+    padding: 10%;
+    height: 25%;
+    width: 100%;
+    background-color: rgba(24, 8, 76, 0.30);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .title-text {
+    transform:translateY(0);
+    margin: 0 auto;
+  }
+  .title-text h4 {
+    text-decoration: none !important; 
+    font-size: 40px;
+  }
+  .title-text p {
+    display: none;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin: auto;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  /******     SPOTIFY    ******/
+  .test-spotify {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-spotify-cover {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-spotify-cover:hover {
+    background-color: rgba(24, 8, 76, 0.60) ; 
+  }
+  /******     PULSEBAND    ******/
+  .test-pulseband {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-pulseband-cover {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-pulseband-cover:hover {
+    background-color: rgba(2, 2, 2, .45);
+  }
+  /******     SELFIE    ******/
+  .test-selfie {
+    left: auto;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-selfie-cover {
+    left: auto;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-selfie-cover:hover {
+    background-color: rgba(24, 8, 76, 0.7);
+  }
+  /******     CREATIVITY    ******/
+  .test-mturk {
+    top: auto;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-mturk-cover {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-mturk-cover:hover {
+    background-color: rgba(2, 2, 2, .55);
   }
 }
 
@@ -778,7 +877,7 @@ ul li {
 /***** FOOTER (page rules - all title pages) *****/
 .footer {
   text-align: center;
-  background-color: #3333CC;
+  background-color: #07bed4;
   color: white;
   height: 15%;
 }
@@ -823,7 +922,7 @@ ul.contact {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(24, 8, 76, 0.33); /*rgba(24, 8, 76, 0.4)*/
+  background-color: rgba(24, 8, 76, 0.9); /*rgba(24, 8, 76, 0.4)*/
 }
 
 
@@ -892,8 +991,11 @@ img.placeholder-img {
     font-size: 48px;
   }
   .proj-text h3 {
-  font-size: 48px;
-  margin-bottom: 5%
+    font-size: 48px;
+    margin-bottom: 5%
+  }
+  .proj-title-page h3 {
+    font-size: 26px;
   }
 /*      IMAGES      */
   .proj-text img {
@@ -962,6 +1064,9 @@ img.placeholder-img {
   }
   img.vert-image {
     width: 100%;
+  }
+  ul.bullets {
+    margin-left: 5%;
   }
 }
 
