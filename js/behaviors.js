@@ -1,8 +1,17 @@
 
+		// used to use this as modernizr but was throwing error so updated html <script src="http://modernizr.com/downloads/modernizr-latest.js" type="text/javascript"></script>
+//bc there were errors with the modernizr-custom.js file 
+$(document).ready(function(){
+    $(window).scrollTop(0);
+});
+
+console.log('where are we', $(document).height());
+
 window.sr = new scrollReveal(); //initiate scrollReveal.js
 
 var mn = $(".main-nav");
 var viewHeight = $(window).height();
+var navHeight = $(".main-nav").height();
 
 //Sticky nav fade in on scroll
 $(window).scroll(function() {
@@ -19,7 +28,8 @@ $(window).scroll(function() {
 //Down button press and scroll to About
 //how can I do this for other pages? just name #down-btn smth different for each page?
 $('#down-btn').click(function() {
-	var offset = -120; //offset XXpx - need to change this for responsive?
+	console.log("navHeight", navHeight);
+	var offset = -navHeight*2; //-120 offset XXpx - need to change this for responsive?
 	$('html, body').animate({
 		scrollTop: $('#about-section').offset().top + offset
 	}, 1000);
