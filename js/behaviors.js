@@ -1,11 +1,10 @@
 
-		// used to use this as modernizr but was throwing error so updated html <script src="http://modernizr.com/downloads/modernizr-latest.js" type="text/javascript"></script>
+// used this bc modernizr caused scroll issues but was throwing error so updated html <script src="http://modernizr.com/downloads/modernizr-latest.js" type="text/javascript"></script>
 //bc there were errors with the modernizr-custom.js file 
-$(document).ready(function(){
-    $(window).scrollTop(0);
-});
+// $(document).ready(function(){
+//     $(window).scrollTop(0);
+// });
 
-console.log('where are we', $(document).height());
 
 window.sr = new scrollReveal(); //initiate scrollReveal.js
 
@@ -66,7 +65,7 @@ $(window).scroll(function() {
 	for (var i=0; i < aArray.length; i++) { //for the length of the array (each section of the page)
 		theID = aArray[i];
 		var divPos = $(theID).offset().top; //get offset of div from top of page
-		var divHeight = $(theID).height(); //get height of div in question
+		var divHeight = $(theID).height(); // nelson - use .data() theID isn't being picked up as a jquery object because being pulled as href. get height of div in question
 
 		if (windowPos >= (divPos - 100) && windowPos < (divHeight + divPos)) { //if the #px above the window frame >= the distance from the div to the top of page &&
 			$("a[href='" + theID + "']").addClass('nav-active');
