@@ -1,11 +1,3 @@
-
-// used this bc modernizr caused scroll issues but was throwing error so updated html <script src="http://modernizr.com/downloads/modernizr-latest.js" type="text/javascript"></script>
-//bc there were errors with the modernizr-custom.js file 
-// $(document).ready(function(){
-//     $(window).scrollTop(0);
-// });
-
-
 window.sr = new scrollReveal(); //initiate scrollReveal.js
 
 var mn = $(".main-nav");
@@ -14,7 +6,7 @@ var navHeight = $(".main-nav").height();
 
 //Sticky nav fade in on scroll
 $(window).scroll(function() {
-	if( $(this).scrollTop() > viewHeight ) { //250 corresponds to body top padding of 250px
+	if( $(this).scrollTop() > viewHeight-30 ) {  //ASC
 		mn.addClass('main-nav-scrolled'); 
 		mn.fadeIn('slow');
 	}
@@ -25,9 +17,7 @@ $(window).scroll(function() {
 }); 
 
 //Down button press and scroll to About
-//how can I do this for other pages? just name #down-btn smth different for each page?
 $('#down-btn').click(function() {
-	console.log("navHeight", navHeight);
 	var offset = -navHeight*2; //-120 offset XXpx - need to change this for responsive?
 	$('html, body').animate({
 		scrollTop: $('#about-section').offset().top + offset
@@ -43,46 +33,6 @@ navElement.click(function(){
 	return false; 
 });
 
-// Nav highlighting and scrolling on click of nav item
-// var aChildren = $('nav li').children();
-var aChildren = $('nav li').children();
-var aArray = [];
-var theID;
-
-//for loop that fills aArray with attribute href values
-for (var i=0; i < aChildren.length; i++) {
-	var aChild = aChildren[i];
-	var ahref = $(aChild).attr('href');
-	aArray.push(ahref);
-}
-console.log('aArray: ', aArray);
-
-$(window).scroll(function() {
-	var windowPos = $(window).scrollTop(); //number of pixels that are hidden from view above the scrollable area; AKA gets offset of window from top of page
-	var windowHeight = $(window).height(); //returns height of viewport
-	var docHeight = $(document).height(); //returns height of entire html document (varies based on vh)
-
-	for (var i=0; i < aArray.length; i++) { //for the length of the array (each section of the page)
-		theID = aArray[i];
-		var divPos = $(theID).offset().top; //get offset of div from top of page
-		var divHeight = $(theID).height(); // nelson - use .data() theID isn't being picked up as a jquery object because being pulled as href. get height of div in question
-
-		if (windowPos >= (divPos - 100) && windowPos < (divHeight + divPos)) { //if the #px above the window frame >= the distance from the div to the top of page &&
-			$("a[href='" + theID + "']").addClass('nav-active');
-		}
-		else {
-			$("a[href='" + theID + "']").removeClass('nav-active');
-		}
-	}
-
-	if (windowPos + windowHeight == docHeight) {
-		if (!$('nav li:last-child a').hasClass('nav-active')) {
-			var navActiveCurrent = $('.nav-active').attr('href');
-			$("a[href='" + navActiveCurrent + "']").removeClass('nav-active');
-			$('nav li:last-child a').addClass('nav-active');
-		}
-	}
-});
 
 // slick carousel 
 $(document).ready(function(){
@@ -96,21 +46,7 @@ $(document).ready(function(){
   });
 });
 
-// $(document).ready(function(){
-//   $('.single-item').slick({
-//   	singleitem: true
-//     // arrows: true
-//   });
-// });
 
-// function initCarousel(){
-// 	$('.single-item').slick({
-// 		dots: true,
-// 		prevArrow: '<div class="slick-prev"><i class="fa fa-chevron-left"></i></div>',
-// 		nextArrow: '<div class="slick-next"><i class="fa fa-chevron-right"></i></div>',
-// 	});
-// }
-// initCarousel;
 
 
 

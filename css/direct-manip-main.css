@@ -227,9 +227,12 @@ div.about {
 .title-frame {
   border: 1.5px solid white;
   height: 100vh;
-  -ms-transform: scale(0.97,0.97); /* IE 9 */
-  -webkit-transform: scale(0.97,0.97); /* Safari */
-  transform: scale(0.97,0.97);
+  display: block; /* ASC */
+  -ms-transform: scale(0.96,0.96); /* IE 9 */
+  -webkit-transform: scale(0.96,0.96); /* Safari */
+  -moz-transform: scale(0.96,0.96); /* Firefox */
+  -o-transform: scale(0.96,0.96); /* Opera */
+  transform: scale(0.96,0.96);
 }
 
 .circ-btn {
@@ -372,7 +375,7 @@ a#btn:visited {
   position: absolute;
   width: 100vw;
   height: 50vh;
-  background-image: url(../img/pulseband-hero.jpeg);
+  background-image: url(../img/pulseband-hero1.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
@@ -397,6 +400,7 @@ a#btn:visited {
   color: white;
   position: relative;
   transform: translateY(100%); /*transform: translateY(100%);*/
+  padding: 5px; /*ASC*/
 }
 .pulseband-title h4 {
   font-size: 40px;
@@ -410,7 +414,7 @@ a#btn:visited {
   position: absolute;
   width: 50vw;
   height: 100vh;
-  background-image: url(../img/spotify-hero.jpeg);
+  background-image: url(../img/spotify-hero1.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
@@ -436,6 +440,7 @@ a#btn:visited {
   position: relative;
   transform: translateY(45vh);
   margin-right: 10vw;
+  padding: 5px;  /*ASC*/
 }
 .spotify-title h4 {
   font-size: 40px;
@@ -448,7 +453,7 @@ a#btn:visited {
   left: 50%;
   width: 50vw;
   height: 100vh;
-  background-image: url(../img/selfie-hero-2.jpeg);
+  background-image: url(../img/selfie-hero-21.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
@@ -477,6 +482,7 @@ a#btn:visited {
   transform: translateY(45vh);
   margin-left: 15vw;
   width: 50%;
+  padding: 5px; /*ASC*/
 /*  margin: 0 auto;*/
 }
 .selfie-title h4 {
@@ -489,7 +495,7 @@ a#btn:visited {
   width: 100vw;
   height: 50vh;
   top: 50%;
-  background-image: url(../img/creative-hero.jpeg);
+  background-image: url(../img/creative-hero1.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(100% 100%, 50% 0, 0 100%);
@@ -515,6 +521,7 @@ a#btn:visited {
   color: white;
   position: relative;
   transform: translateY(25vh); /*transform: translateY(100%);*//*deviating from pulseband (transform:translateY(50%))*/
+  padding: 5px; /*ASC*/
 }
 .mturk-title h4 {
   font-size: 40px;
@@ -603,10 +610,16 @@ ul.contact {
   .about p {
     font-size: 16px;
   }
-  div.spotify-title h4, div.pulseband-title h4, div.selfie-title h4, div.mturk-title h4 {
+  div.spotify-title h4, 
+  div.pulseband-title h4, 
+  div.selfie-title h4, 
+  div.mturk-title h4 {
     font-size: 32px;
   }
-  div.spotify-title p, div.pulseband-title p, div.selfie-title p, div.mturk-title p {
+  div.spotify-title p, 
+  div.pulseband-title p, 
+  div.selfie-title p, 
+  div.mturk-title p {
     font-size: 16px;
   }
   .title-frame {
@@ -692,7 +705,6 @@ ul.contact {
     background-repeat: no-repeat;
   }
   .title-text {
-    transform:translateY(0);
     margin: 0 auto;
   }
   .title-text h4 {
@@ -918,7 +930,7 @@ ul.contact {
 .pulseband-title-page {
   width: 100vw;
   height: 100vh;
-  background: url(../img/pulseband-hero.jpeg);
+  background: url(../img/pulseband-hero1.jpeg);
   background-size: cover;
   color: #fff;
   text-align: center; 
@@ -1096,7 +1108,7 @@ img.placeholder-img {
 .creative-title-page {
   width: 100vw;
   height: 100vh;
-  background: url(../img/creative-hero.jpeg);
+  background: url(../img/creative-hero1.jpeg);
   background-size: cover;
   color: #fff;
   text-align: center; 
@@ -1150,7 +1162,7 @@ button.slick-prev.slick-arrow:before {
 .spotify-title-page {
   width: 100vw;
   height: 100vh;
-  background: url(../img/spotify-hero.jpeg);
+  background: url(../img/spotify-hero1.jpeg);
   background-size: cover;
   color: #fff;
   text-align: center; 
@@ -1191,7 +1203,7 @@ button.slick-prev.slick-arrow:before {
 .selfie-title-page {
   width: 100vw;
   height: 100vh;
-  background: url(../img/selfie-hero-2.jpeg);
+  background: url(../img/selfie-hero-21.jpeg);
   background-size: cover;
   color: #fff;
   text-align: center; 
