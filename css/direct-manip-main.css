@@ -420,7 +420,7 @@ a#btn:visited {
   position: absolute;
   width: 50vw;
   height: 100vh;
-  background-color: rgba(24, 8, 76, 0.30);
+  background-color: rgba(24, 8, 76, 0.15);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
@@ -459,7 +459,7 @@ a#btn:visited {
   left: 50%;
   width: 50vw;
   height: 100vh;
-  background-color: rgba(24, 8, 76, 0.45);
+  background-color: rgba(24, 8, 76, 0.25);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
