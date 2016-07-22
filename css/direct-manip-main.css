@@ -81,6 +81,23 @@ p.caption-text {
   margin-right: 10%;
 }
 
+a:link { /* unvisited link */
+/*  color: #07bed4;*/
+}
+a {
+  text-decoration: none;
+  color: #047b84;
+  font-weight: 300;
+}
+
+a:hover {
+  color: #07bed4;
+}
+
+/*a:visited { 
+  color: #047b84;
+}*/
+
 .main-container section h4 {
   margin-top: 10%;
 }
@@ -399,6 +416,10 @@ a#btn:visited {
   text-align: center;
   color: white;
   position: relative;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  -ms-transform: translateY(100%);
   transform: translateY(100%); /*transform: translateY(100%);*/
   padding: 5px; /*ASC*/
 }
@@ -438,6 +459,10 @@ a#btn:visited {
   text-align: center; 
   color: white;
   position: relative;
+  -webkit-transform: translateY(45vh);
+  -moz-transform: translateY(45vh);
+  -o-transform: translateY(45vh);
+  -ms-transform: translateY(45vh);
   transform: translateY(45vh);
   margin-right: 10vw;
   padding: 5px;  /*ASC*/
@@ -479,6 +504,10 @@ a#btn:visited {
   text-align: center; 
   color: white;
   position: relative;
+  -webkit-transform: translateY(45vh);
+  -moz-transform: translateY(45vh);
+  -o-transform: translateY(45vh);
+  -ms-transform: translateY(45vh);
   transform: translateY(45vh);
   margin-left: 15vw;
   width: 50%;
@@ -520,6 +549,10 @@ a#btn:visited {
   text-align: center;
   color: white;
   position: relative;
+  -webkit-transform: translateY(25vh);
+  -moz-transform: translateY(25vh);
+  -o-transform: translateY(25vh);
+  -ms-transform: translateY(25vh);
   transform: translateY(25vh); /*transform: translateY(100%);*//*deviating from pulseband (transform:translateY(50%))*/
   padding: 5px; /*ASC*/
 }
@@ -582,11 +615,13 @@ ul.contact {
     width: 70%;
   }
   .title-frame {
-  border: 1.5px solid white;
-  height: 100vh;
-  -ms-transform: scale(0.95,0.97); /* IE 9 */
-  -webkit-transform: scale(0.95,0.97); /* Safari */
-  transform: scale(0.95,0.97);
+    border: 1.5px solid white;
+    height: 100vh;
+    -moz-transform: scale(0.95,0.97); /* Firefox */
+    -o-transform: scale(0.95,0.97); /* Opera */
+    -ms-transform: scale(0.95,0.97); /* IE 9 */
+    -webkit-transform: scale(0.95,0.97); /* Safari */
+    transform: scale(0.95,0.97);
   }
 }
 
@@ -623,11 +658,13 @@ ul.contact {
     font-size: 16px;
   }
   .title-frame {
-  border: 1.5px solid white;
-  height: 100vh;
-  -ms-transform: scale(0.90,0.97); /* IE 9 */
-  -webkit-transform: scale(0.90,0.97); /* Safari */
-  transform: scale(0.90,0.97);
+    border: 1.5px solid white;
+    height: 100vh;
+    -moz-transform: scale(0.90,0.97); /* Firefox */
+    -o-transform: scale(0.90,0.97); /* Opera */
+    -ms-transform: scale(0.90,0.97); /* IE 9 */
+    -webkit-transform: scale(0.90,0.97); /* Safari */
+    transform: scale(0.90,0.97);
   }
 }
 
@@ -639,9 +676,17 @@ ul.contact {
 
 @media screen and (max-height: 500px) {
   .pulseband-title {
+    -webkit-transform: translateY(70%);
+    -moz-transform: translateY(70%);
+    -o-transform: translateY(70%);
+    -ms-transform: translateY(70%);
     transform: translateY(70%);
   }
   .mturk-title {
+    -webkit-transform: translateY(30vh);
+    -moz-transform: translateY(30vh);
+    -o-transform: translateY(30vh);
+    -ms-transform: translateY(30vh);
     transform: translateY(30vh);
   }
 }
@@ -760,7 +805,7 @@ ul.contact {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
   .test-selfie-cover:hover {
-    background-color: rgba(24, 8, 76, 0.7);
+    background-color: rgba(24, 8, 76, 0.4); /* ASC */
   }
   /******     CREATIVITY    ******/
   .test-mturk {
@@ -818,16 +863,7 @@ ul.bullets {
 .contact {
   margin-top: 5%;
 }
-a:link { /* unvisited link */
-  text-decoration: none;
-/*  color: #07bed4;*/
-}
-a:hover {
-  color: #047b84;
-}
-a:visited { 
-  color: #047b84;
-}
+
 div.multipic-container {
   width: 100%;
   text-align: center;
@@ -961,9 +997,104 @@ img.placeholder-img {
 .pulseband-title-frame {
   border: 1.5px solid white;
   height: 100vh;
-  -ms-transform: scale(0.97,0.97); /* IE 9 */
-  -webkit-transform: scale(0.97,0.97); /* Safari */
-  transform: scale(0.97,0.97);
+  -ms-transform: scale(0.96,0.96); /* IE 9 */
+  -webkit-transform: scale(0.96,0.96); /* Safari */
+  -moz-transform: scale(0.96,0.96); /* Firefox */
+  -o-transform: scale(0.96,0.96); /* Opera */
+  transform: scale(0.96,0.96);
+}
+
+
+/******     BROWSER-SPECIFIC     ******/
+/*.selector, 
+x:-moz-any-link, 
+x:default { 
+  color:lime; 
+} 
+
+@-moz-document url-prefix() { 
+  .selector {
+     color:lime;
+  }
+}*/
+
+
+/* FireFox 3 */
+/******     SPOTIFY    ******/
+  .test-spotify,
+  x:-moz-any-link, 
+  x:default {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-spotify-cover,
+  x:-moz-any-link, 
+  x:default  {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-spotify-cover:hover,
+  x:-moz-any-link, 
+  x:default  {
+    background-color: rgba(24, 8, 76, 0.60) ; 
+  }
+  /******     PULSEBAND    ******/
+  .test-pulseband,
+  x:-moz-any-link, 
+  x:default  {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-pulseband-cover,
+  x:-moz-any-link, 
+  x:default  {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-pulseband-cover:hover,
+  x:-moz-any-link, 
+  x:default  {
+    background-color: rgba(2, 2, 2, .45);
+  }
+  /******     SELFIE    ******/
+  .test-selfie,
+  x:-moz-any-link, 
+  x:default  {
+    left: auto;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-selfie-cover,
+  x:-moz-any-link, 
+  x:default  {
+    left: auto;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-selfie-cover:hover,
+  x:-moz-any-link, 
+  x:default  {
+    background-color: rgba(24, 8, 76, 0.4); /* ASC */
+  }
+  /******     CREATIVITY    ******/
+  .test-mturk,
+  x:-moz-any-link, 
+  x:default  {
+    top: auto;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-mturk-cover,
+  x:-moz-any-link, 
+  x:default  {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .test-mturk-cover:hover,
+  x:-moz-any-link, 
+  x:default  {
+    background-color: rgba(2, 2, 2, .55);
+  }
 }
 
 
@@ -1141,9 +1272,11 @@ button.slick-prev.slick-arrow:before {
 .creative-title-frame {
   border: 1.5px solid white;
   height: 100vh;
-  -ms-transform: scale(0.97,0.97); /* IE 9 */
-  -webkit-transform: scale(0.97,0.97); /* Safari */
-  transform: scale(0.97,0.97);
+  -ms-transform: scale(0.96,0.96); /* IE 9 */
+  -webkit-transform: scale(0.96,0.96); /* Safari */
+  -moz-transform: scale(0.96,0.96); /* Firefox */
+  -o-transform: scale(0.96,0.96); /* Safari */
+  transform: scale(0.96,0.96);
 }
 
 /************************     SPOTIFY PROJECT PAGE    ************************/
@@ -1181,9 +1314,11 @@ button.slick-prev.slick-arrow:before {
 .spotify-title-frame {
   border: 1.5px solid white;
   height: 100vh;
-  -ms-transform: scale(0.97,0.97); /* IE 9 */
-  -webkit-transform: scale(0.97,0.97); /* Safari */
-  transform: scale(0.97,0.97);
+  -ms-transform: scale(0.96,0.96); /* IE 9 */
+  -webkit-transform: scale(0.96,0.96); /* Safari */
+  -moz-transform: scale(0.96,0.96); /* Firefox */
+  -o-transform: scale(0.96,0.96); /* Safari */
+  transform: scale(0.96,0.96);
 }
 
 
@@ -1222,7 +1357,9 @@ button.slick-prev.slick-arrow:before {
 .selfie-title-frame {
   border: 1.5px solid white;
   height: 100vh;
-  -ms-transform: scale(0.97,0.97); /* IE 9 */
-  -webkit-transform: scale(0.97,0.97); /* Safari */
-  transform: scale(0.97,0.97);
+  -ms-transform: scale(0.96,0.96); /* IE 9 */
+  -webkit-transform: scale(0.96,0.96); /* Safari */
+  -moz-transform: scale(0.96,0.96); /* Firefox */
+  -o-transform: scale(0.96,0.96); /* Safari */
+  transform: scale(0.96,0.96);
 }
