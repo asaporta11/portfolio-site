@@ -1243,8 +1243,21 @@ x:default {
 /* FireFox 3 */
 /************* BOXES *************/
 @-moz-document url-prefix(http://ariellesaporta.com/){
-  
   .proj-container,
+  x:-moz-any-link, 
+  x:default
+
+  .proj-container,
+  x:-moz-any-link, 
+  x:default {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .proj-container, 
   x:-moz-any-link, 
   x:default {
     position: absolute;
@@ -1257,7 +1270,7 @@ x:default {
   x:-moz-any-link, 
   x:default {
     position: relative;
-    padding: 10%;
+/*    padding: 10%;*/
     height: 25%;
     width: 100%;
     background-color: rgba(24, 8, 76, 0.30);
@@ -1268,11 +1281,12 @@ x:default {
   x:-moz-any-link, 
   x:default {
     margin: 0 auto;
-    -webkit-transform: translateY(-70%);
-    -moz-transform: translateY(-70%);
-    -o-transform: translateY(-70%);
-    -ms-transform: translateY(-70%);
-    transform: translateY(-70%);
+    -webkit-transform: translateY(30%);
+    -moz-transform: translateY(30%);
+    -o-transform: translateY(30%);
+    -ms-transform: translateY(30%);
+    transform: translateY(30%);
+    /*transform: translateY(-70%); ASC */
   }
   .title-text h4,
   x:-moz-any-link, 
@@ -1298,76 +1312,97 @@ x:default {
   .test-spotify,
   x:-moz-any-link, 
   x:default {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    top: auto;
+    left: 0;
+   /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
   }
   .test-spotify-cover,
   x:-moz-any-link, 
   x:default  {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    top: auto;
+    left: 0;
+    /*-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
   }
-  .test-spotify-cover:hover,
+/*  .test-spotify-cover:hover,
   x:-moz-any-link, 
   x:default  {
     background-color: rgba(24, 8, 76, 0.60) ; 
-  }
+  }*/
+
   /******     PULSEBAND    ******/
+
   .test-pulseband,
   x:-moz-any-link, 
   x:default  {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    top: auto;
+    left: 0;
+    /*-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
   }
   .test-pulseband-cover,
   x:-moz-any-link, 
   x:default  {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    top: auto;
+    left: 0;
+    /*-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
   }
-  .test-pulseband-cover:hover,
+/*  .test-pulseband-cover:hover,
   x:-moz-any-link, 
   x:default  {
     background-color: rgba(2, 2, 2, .45);
-  }
+  }*/
+
   /******     SELFIE    ******/
+
   .test-selfie,
   x:-moz-any-link, 
   x:default  {
-    left: auto;
+    left: 0;
+    top: auto;
+    /*left: auto;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
   }
   .test-selfie-cover,
   x:-moz-any-link, 
   x:default  {
-    left: auto;
+    left: 0;
+    top: auto;    
+    /*left: auto;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
   }
-  .test-selfie-cover:hover,
+/*  .test-selfie-cover:hover,
   x:-moz-any-link, 
   x:default  {
-    background-color: rgba(24, 8, 76, 0.4); /* ASC */
-  }
+    background-color: rgba(24, 8, 76, 0.4); 
+  }*/
+
   /******     CREATIVITY    ******/
+
   .test-mturk,
   x:-moz-any-link, 
   x:default  {
     top: auto;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    left: 0;
+    /*-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
   }
   .test-mturk-cover,
   x:-moz-any-link, 
   x:default  {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    top: auto;
+    left: 0;
+    /*-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
   }
-  .test-mturk-cover:hover,
+/*  .test-mturk-cover:hover,
   x:-moz-any-link, 
   x:default  {
     background-color: rgba(2, 2, 2, .55);
-  }
+  }*/
 }
 
