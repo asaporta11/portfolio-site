@@ -4,6 +4,21 @@ var mn = $(".main-nav");
 var viewHeight = $(window).height();
 var navHeight = $(".main-nav").height();
 
+var isFirefox = typeof InstallTrigger !== 'undefined';
+var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+var isChrome = !!window.chrome && !!window.chrome.webstore;
+
+if (isFirefox || isSafari || isChrome) {
+	console.log('isFirefox', isFirefox);
+	console.log('isSafari', isSafari);
+	console.log('isChrome', isChrome);
+}
+else {
+	$('.otherbrowser').addClass('annoying-browser')
+	alert('This website plays with fun browsers! Please use Chrome, Safari, or Firefox.');
+}
+
+
 //Sticky nav fade in on scroll
 $(window).scroll(function() {
 	if( $(this).scrollTop() > viewHeight-30 ) {  //ASC

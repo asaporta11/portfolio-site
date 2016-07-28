@@ -81,26 +81,35 @@ p.caption-text {
   margin-right: 10%;
 }
 
-a:link { /* unvisited link */
-/*  color: #07bed4;*/
-}
 a {
   text-decoration: none;
-  color: #047b84;
+  color: #07bed4;
   font-weight: 300;
 }
 
 a:hover {
-  color: #07bed4;
-}
-
-/*a:visited { 
   color: #047b84;
-}*/
+}
 
 .main-container section h4 {
   margin-top: 10%;
 }
+
+.annoying-browser {
+  height: 5%;
+  width: 100%;
+  background-color: red;
+  position: fixed;  
+  top: 0;
+  left: 0;
+  z-index: 10000000000;
+}
+.annoying-browser p {
+  color: white;
+  text-align: center;
+  margin: 1% auto;
+}
+
 
 /************* NAV *************/
 /*nav based on https://teamtreehouse.com/community/forum-tip-create-a-sticky-navigation-with-css-and-jquery-2*/
@@ -326,7 +335,7 @@ a#btn:visited {
 }
 .res-btn-container a#btn{
   display: block;
-  margin: 5% auto;
+  margin: 1% auto;
 }
 
 /************* PROJECTS /// FOR REAL \\\ *************/
@@ -583,6 +592,9 @@ ul.contact {
   .title-page h1 {
   font-size: 76px;
   }
+  .annoying-browser {
+    height: 7%;
+  }
 }
 
 @media screen and (max-width: 470px) {
@@ -671,6 +683,10 @@ ul.contact {
     display: inline-block;
     padding-top: 22px;
     padding-right: 10px ;
+  }
+
+  .annoying-browser {
+    height: 10%;
   }
 }
 
@@ -1226,7 +1242,25 @@ button.slick-prev.slick-arrow:before {
   transform: scale(0.96,0.96);
 }
 
-/******     BROWSER-SPECIFIC     ******/
+
+/************     BROWSER-SPECIFIC     *************/
+
+/************      Android     *************/
+
+.on-device .visible-android, 
+.test-spotify {
+    top: auto;
+    left: 0;
+}
+
+.on-device .visible-android,  
+.test-spotify-cover {
+    top: auto;
+    left: 0;
+}
+
+/************     FireFox 3     *************/
+
 /*.selector, 
 x:-moz-any-link, 
 x:default { 
@@ -1239,8 +1273,6 @@ x:default {
   }
 }*/
 
-
-/* FireFox 3 */
 /************* BOXES *************/
 @-moz-document url-prefix(http://ariellesaporta.com/){
   .proj-container,
