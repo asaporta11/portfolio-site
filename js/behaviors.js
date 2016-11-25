@@ -8,14 +8,17 @@ var isFirefox = typeof InstallTrigger !== 'undefined';
 var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 var isChrome = !!window.chrome && !!window.chrome.webstore;
 
+var alerted = localStorage.getItem('alerted') || '';
+
 if (isFirefox || isSafari || isChrome) {
 	console.log('isFirefox', isFirefox);
 	console.log('isSafari', isSafari);
 	console.log('isChrome', isChrome);
 }
-else {
-	$('.otherbrowser').addClass('annoying-browser')
+else if (alerted != 'yes') {
 	alert('This website plays with fun browsers! Please use Chrome, Safari, or Firefox.');
+	localStorage.setItem('alerted','yes');
+	//$('.otherbrowser').addClass('annoying-browser')
 }
 
 

@@ -335,7 +335,8 @@ a#btn:visited {
 }
 .res-btn-container a#btn{
   display: block;
-  margin: 1% auto;
+  margin: 5% auto;
+  margin-bottom: 10%;
 }
 
 /************* PROJECTS /// FOR REAL \\\ *************/
